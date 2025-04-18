@@ -32,9 +32,11 @@
     padding: 0;
 }
 
+/* Force light mode for the entire site regardless of system preferences */
 html {
     scroll-behavior: smooth; /* Smooth scroll for anchor links */
     font-size: var(--base-font-size);
+    color-scheme: light; /* Explicitly sets the color scheme to light */
 }
 
 body {

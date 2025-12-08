@@ -1,0 +1,12 @@
+# BUNIVA Technologies - Robots.txt
+# Website: https://buniva.com
+# Product: HomeManager - https://homemanager.buniva.co.ke
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://buniva.com/sitemap.xml
+
+# Crawl-delay for considerate crawling
+Crawl-delay: 1

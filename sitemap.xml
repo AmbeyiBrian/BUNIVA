@@ -6,7 +6,7 @@
     
     <!-- BUNIVA Technologies Homepage -->
     <url>
-        <loc>https://buniva.com/</loc>
+        <loc>https://buniva.co.ke/</loc>
         <lastmod>2025-12-08</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -14,21 +14,21 @@
     
     <!-- Page Sections -->
     <url>
-        <loc>https://buniva.com/#products</loc>
+        <loc>https://buniva.co.ke/#products</loc>
         <lastmod>2025-12-08</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <url>
-        <loc>https://buniva.com/#services</loc>
+        <loc>https://buniva.co.ke/#services</loc>
         <lastmod>2025-12-08</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://buniva.com/#contact</loc>
+        <loc>https://buniva.co.ke/#contact</loc>
         <lastmod>2025-12-08</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -36,7 +36,7 @@
     
     <!-- Blog Section -->
     <url>
-        <loc>https://buniva.com/blog.html</loc>
+        <loc>https://buniva.co.ke/blog.html</loc>
         <lastmod>2025-12-08</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -44,21 +44,21 @@
     
     <!-- Blog Articles -->
     <url>
-        <loc>https://buniva.com/blog/mpesa-rent-collection-guide.html</loc>
+        <loc>https://buniva.co.ke/blog/mpesa-rent-collection-guide.html</loc>
         <lastmod>2025-12-08</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     
     <url>
-        <loc>https://buniva.com/blog/property-analytics-guide.html</loc>
+        <loc>https://buniva.co.ke/blog/property-analytics-guide.html</loc>
         <lastmod>2025-12-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     
     <url>
-        <loc>https://buniva.com/blog/scaling-property-portfolio.html</loc>
+        <loc>https://buniva.co.ke/blog/scaling-property-portfolio.html</loc>
         <lastmod>2025-12-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>

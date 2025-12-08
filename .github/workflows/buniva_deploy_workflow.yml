@@ -1,0 +1,70 @@
+name: Deploy Buniva Website to AWS
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:  # Allow manual trigger
+
+env:
+  AWS_REGION: us-east-1
+  S3_BUCKET: buniva-website-prod-971994957690
+  CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+
+jobs:
+  deploy:
+    name: Deploy to S3 & CloudFront
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Sync files to S3
+        run: |
+          aws s3 sync . s3://${{ env.S3_BUCKET }}/ \
+            --exclude ".git/*" \
+            --exclude ".github/*" \
+            --exclude "README.md" \
+            --delete \
+            --cache-control "max-age=86400"
+          
+          # Set correct content types
+          aws s3 cp s3://${{ env.S3_BUCKET }}/ s3://${{ env.S3_BUCKET }}/ \
+            --recursive \
+            --exclude "*" \
+            --include "*.html" \
+            --content-type "text/html" \
+            --metadata-directive REPLACE
+          
+          aws s3 cp s3://${{ env.S3_BUCKET }}/ s3://${{ env.S3_BUCKET }}/ \
+            --recursive \
+            --exclude "*" \
+            --include "*.css" \
+            --content-type "text/css" \
+            --metadata-directive REPLACE
+          
+          aws s3 cp s3://${{ env.S3_BUCKET }}/ s3://${{ env.S3_BUCKET }}/ \
+            --recursive \
+            --exclude "*" \
+            --include "*.js" \
+            --content-type "application/javascript" \
+            --metadata-directive REPLACE
+
+      - name: Invalidate CloudFront cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ env.CLOUDFRONT_DISTRIBUTION_ID }} \
+            --paths "/*"
+
+      - name: Deployment complete
+        run: |
+          echo "✅ Buniva website deployed successfully!"
+          echo "🌐 URL: https://buniva.co.ke"

@@ -320,7 +320,6 @@ section {
     background: var(--primary-color);
     color: white;
     border-color: var(--primary-color);
-    transform: rotate(15deg);
 }
 
 .nav-toggle-btn,

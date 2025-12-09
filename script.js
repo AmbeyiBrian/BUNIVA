@@ -27,11 +27,17 @@ navLinks.forEach(link => {
 const themeToggle = document.getElementById('theme-toggle');
 const themeIcon = themeToggle.querySelector('i');
 
-// Check for saved theme preference or default to light mode
-const currentTheme = localStorage.getItem('theme') || 'light';
-document.documentElement.setAttribute('data-theme', currentTheme);
+// Check for saved preference, otherwise use system preference
+const savedTheme = localStorage.getItem('theme');
+const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+// Only set data-theme if user has manually chosen (overrides system)
+if (savedTheme) {
+    document.documentElement.setAttribute('data-theme', savedTheme);
+}
 
 // Update icon based on current theme
+const currentTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
 if (currentTheme === 'dark') {
     themeIcon.className = 'fas fa-sun';
 } else {
@@ -40,7 +46,9 @@ if (currentTheme === 'dark') {
 
 themeToggle.addEventListener('click', () => {
     const currentTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const actualCurrent = currentTheme || (systemPrefersDark ? 'dark' : 'light');
+    const newTheme = actualCurrent === 'dark' ? 'light' : 'dark';
     
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);

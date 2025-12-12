@@ -1,0 +1,27 @@
+{
+    "name": "BUNIVA Technologies",
+    "short_name": "BUNIVA Tech",
+    "description": "BUNIVA Technologies builds innovative software solutions. Our flagship product HomeManager offers complete property business management in Kenya.",
+    "icons": [
+        {
+            "src": "/buniva_logo.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/favicon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#667eea",
+    "background_color": "#0a0a0f"
+}

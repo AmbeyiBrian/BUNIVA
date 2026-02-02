@@ -264,7 +264,7 @@ a {
 }
 
 .hero-content p {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     color: var(--text-body);
     margin-bottom: var(--spacing-sm);
     line-height: 1.7;
@@ -854,10 +854,13 @@ a {
         max-width: 100%;
     }
     
-    .hero-visual,
     .section-visual,
     .product-visual {
         order: -1;
+    }
+    
+    .hero-visual {
+        order: 1;
     }
     
     .features-grid {

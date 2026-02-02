@@ -1,200 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Primary SEO Meta Tags -->
-    <title>How to Automate Rent Collection with M-Pesa in Kenya | BUNIVA Tech Blog</title>
-    <meta name="description"
-        content="Learn how to automate rent collection using M-Pesa integration. Reduce late payments, improve cash flow, and save time with automated property payment solutions in Kenya.">
-    <meta name="keywords"
-        content="M-Pesa rent collection, automate rent payments Kenya, mobile money rent, property payment automation, landlord M-Pesa, tenant payment system Kenya">
+    <title>How to Automate Rent Collection with M-Pesa in Kenya | BUNIVA Tech</title>
+    <meta name="description" content="Learn how to automate rent collection using M-Pesa integration. Reduce late payments and improve cash flow.">
     <meta name="author" content="BUNIVA Technologies">
-    <meta name="robots" content="index, follow">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="512x512" href="../buniva_logo.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="../favicon-48x48.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
-    <link rel="manifest" href="../site.webmanifest">
-
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://buniva.co.ke/blog/mpesa-rent-collection-guide.html">
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="article">
-    <meta property="og:site_name" content="BUNIVA Technologies">
-    <meta property="og:title" content="How to Automate Rent Collection with M-Pesa in Kenya">
-    <meta property="og:description"
-        content="Stop chasing tenants for rent. Learn how M-Pesa integration can automate your rent collection.">
-    <meta property="og:url" content="https://buniva.co.ke/blog/mpesa-rent-collection-guide.html">
-    <meta property="article:published_time" content="2025-12-08T10:00:00+03:00">
-
-    <!-- Structured Data - Article -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "How to Automate Rent Collection with M-Pesa in Kenya",
-        "description": "Learn how to automate rent collection using M-Pesa integration. Reduce late payments, improve cash flow, and save time.",
-        "author": {
-            "@type": "Organization",
-            "name": "BUNIVA Technologies"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "BUNIVA Technologies",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://buniva.co.ke/buniva_logo.png"
-            }
-        },
-        "datePublished": "2025-12-08",
-        "mainEntityOfPage": "https://buniva.co.ke/blog/mpesa-rent-collection-guide.html"
-    }
-    </script>
-
-    <!-- Google Fonts -->
+    <meta name="theme-color" content="#0d9488">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../blog.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7G7T5SP105"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-7G7T5SP105');
-    </script>
 </head>
-
 <body>
-
     <header class="site-header">
         <div class="container header-container">
-            <a href="../index.html" class="logo">
-                <img src="../buniva_logo.png" alt="BUNIVA" class="logo-img">
-            </a>
+            <a href="../index.html" class="logo"><img src="../buniva_logo.png" alt="BUNIVA" class="logo-img"></a>
             <nav class="main-nav" id="main-nav">
                 <button class="nav-close-btn" id="nav-close-btn" aria-label="Close menu">×</button>
                 <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../index.html#products">Products</a></li>
+                    <li><a href="../index.html#homemanager">HomeManager</a></li>
+                    <li><a href="../index.html#about">About</a></li>
                     <li><a href="../index.html#services">Services</a></li>
                     <li><a href="../blog.html" class="active">Blog</a></li>
                     <li><a href="../index.html#contact">Contact</a></li>
                 </ul>
             </nav>
-            <button class="nav-toggle-btn" id="nav-toggle-btn" aria-label="Open menu">☰</button>
-            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-                <i class="fas fa-moon"></i>
-            </button>
+            <div class="header-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+                <button class="nav-toggle-btn" id="nav-toggle-btn" aria-label="Open menu">☰</button>
+                <a href="https://wa.me/254797259698" target="_blank" rel="noopener" class="btn-whatsapp"><i class="fab fa-whatsapp"></i><span>WhatsApp Us</span></a>
+            </div>
         </div>
     </header>
-
-    <main role="main">
-        <article class="blog-article" itemscope itemtype="https://schema.org/BlogPosting">
+    <main>
+        <article class="blog-article">
             <div class="container">
-                <a href="../blog.html" class="back-to-blog">
-                    <i class="fas fa-arrow-left"></i> Back to Blog
-                </a>
-
+                <a href="../blog.html" class="back-to-blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
                 <header class="article-header">
                     <div class="article-meta">
-                        <span><i class="fas fa-calendar"></i> <time datetime="2025-12-08"
-                                itemprop="datePublished">December 8, 2025</time></span>
+                        <span><i class="fas fa-calendar"></i> December 8, 2025</span>
                         <span><i class="fas fa-clock"></i> 5 min read</span>
                         <span><i class="fas fa-tag"></i> Payments</span>
                     </div>
-                    <h1 itemprop="headline">How to Automate Rent Collection with M-Pesa in Kenya</h1>
-                    <p class="article-excerpt" itemprop="description">Stop chasing tenants for rent every month. Learn
-                        how M-Pesa integration can transform your rent collection process, reduce late payments by up to
-                        60%, and give you real-time visibility into your cash flow.</p>
+                    <h1>How to Automate Rent Collection with M-Pesa in Kenya</h1>
+                    <p class="article-excerpt">Stop chasing tenants for rent every month. Learn how M-Pesa integration can transform your rent collection process and reduce late payments by up to 60%.</p>
                 </header>
-
-                <div class="article-content" itemprop="articleBody">
-
+                <div class="article-content">
                     <h2>The Problem: Manual Rent Collection Doesn't Scale</h2>
-                    <p>If you're managing rental properties in Kenya, you've likely experienced the monthly headache of
-                        rent collection. Chasing tenants, tracking partial payments, reconciling M-Pesa statements—it's
-                        exhausting and time-consuming.</p>
-
-                    <p>Most landlords spend <strong>5-10 hours per month</strong> just on rent collection activities.
-                        That's time you could spend finding new properties or improving existing ones.</p>
+                    <p>If you're managing rental properties in Kenya, you've likely experienced the monthly headache of rent collection. Chasing tenants, tracking partial payments, reconciling M-Pesa statements—it's exhausting.</p>
+                    <p>Most landlords spend <strong>5-10 hours per month</strong> just on rent collection activities.</p>
 
                     <h2>Why M-Pesa is Perfect for Rent Collection</h2>
-                    <p>Kenya leads the world in mobile money adoption. Over 90% of your tenants already use M-Pesa
-                        daily. The infrastructure is there—you just need to tap into it properly.</p>
-
-                    <p>Benefits of M-Pesa for rent collection:</p>
+                    <p>Kenya leads the world in mobile money adoption. Over 90% of your tenants already use M-Pesa daily.</p>
                     <ul>
-                        <li><strong>24/7 availability</strong> — Tenants can pay anytime, anywhere</li>
+                        <li><strong>24/7 availability</strong> — Tenants can pay anytime</li>
                         <li><strong>Instant confirmation</strong> — Both parties get SMS receipts</li>
                         <li><strong>Digital paper trail</strong> — Every transaction is recorded</li>
-                        <li><strong>Lower costs</strong> — Cheaper than bank transfers or cheques</li>
+                        <li><strong>Lower costs</strong> — Cheaper than bank transfers</li>
                     </ul>
 
                     <h2>The Automation Approach</h2>
-                    <p>True automation goes beyond just accepting M-Pesa payments. Here's what a fully automated system
-                        looks like:</p>
-
                     <h3>1. Automated Billing</h3>
-                    <p>Every month, the system automatically generates invoices for each unit—including rent, water,
-                        electricity, and any other charges. Tenants receive SMS notifications with the exact amount due.
-                    </p>
+                    <p>The system automatically generates invoices for each unit—including rent, water, electricity. Tenants receive SMS notifications with the exact amount due.</p>
 
                     <h3>2. Direct M-Pesa Integration</h3>
-                    <p>When tenants pay via M-Pesa, the payment is automatically matched to their account. No manual
-                        reconciliation. No missed payments hiding in your M-Pesa statement.</p>
+                    <p>When tenants pay via M-Pesa, the payment is automatically matched to their account. No manual reconciliation.</p>
 
-                    <h3>3. Payment Allocation</h3>
-                    <p>Overpayments are carried forward. Partial payments are tracked. The system always knows exactly
-                        what each tenant owes.</p>
+                    <h3>3. Automated Reminders</h3>
+                    <p>Tenants who haven't paid by the 5th get an SMS reminder. This happens automatically—no awkward phone calls required.</p>
 
-                    <h3>4. Automated Reminders</h3>
-                    <p>Tenants who haven't paid by the 5th get an SMS reminder. Still unpaid by the 10th? Another
-                        reminder. This happens automatically—no awkward phone calls required.</p>
+                    <blockquote><p>"After implementing automated M-Pesa collection, our late payment rate dropped from 35% to under 10% in just two months."</p></blockquote>
 
-                    <blockquote>
-                        <p>"After implementing automated M-Pesa collection, our late payment rate dropped from 35% to
-                            under 10% in just two months."</p>
-                    </blockquote>
-
-                    <h2>What You Need to Get Started</h2>
-                    <p>To automate rent collection with M-Pesa, you need:</p>
-                    <ol>
-                        <li><strong>M-Pesa Paybill or Till Number</strong> — Your dedicated payment destination</li>
-                        <li><strong>Daraja API Integration</strong> — Safaricom's developer platform for payment
-                            processing</li>
-                        <li><strong>Property Management System</strong> — Software to track tenants, units, and payments
-                        </li>
-                        <li><strong>SMS Gateway</strong> — For automated tenant notifications</li>
-                    </ol>
-
-                    <p>Building this from scratch requires significant technical expertise. That's why many property
-                        managers choose purpose-built solutions.</p>
-
-                    <!-- CTA Box -->
                     <div class="article-cta-box">
                         <h3>Ready to Automate Your Rent Collection?</h3>
-                        <p>HomeManager by BUNIVA Tech includes full M-Pesa integration, automated billing, tenant
-                            notifications, and real-time payment tracking—all in one platform.</p>
-                        <a href="https://homemanager.buniva.co.ke/" target="_blank" rel="noopener"
-                            class="btn btn-primary">
-                            <span>Try HomeManager Free</span>
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
+                        <p>HomeManager includes full M-Pesa integration, automated billing, and real-time payment tracking.</p>
+                        <a href="https://homemanager.buniva.co.ke/" target="_blank" rel="noopener" class="btn btn-primary">Try HomeManager Free <i class="fas fa-external-link-alt"></i></a>
                     </div>
 
                     <h2>Key Takeaways</h2>
@@ -204,28 +89,17 @@
                         <li>Automated reminders significantly reduce late payments</li>
                         <li>The right software can save you 5-10 hours per month</li>
                     </ul>
-
-                    <p>Property management in Kenya is evolving. The landlords who embrace automation will have more
-                        time, better cash flow, and happier tenants.</p>
-
                 </div>
             </div>
         </article>
     </main>
-
-    <footer class="site-footer" role="contentinfo">
+    <footer class="site-footer">
         <div class="container">
-            <div class="footer-content">
-                <p>© 2025 <strong>BUNIVA Technologies</strong>. All rights reserved.</p>
-                <p class="tagline">BUNIVA Tech — Building Software Solutions We Own, Co-Own, or Build For You</p>
-                <p class="footer-products">Products: <a href="https://homemanager.buniva.co.ke/" target="_blank"
-                        rel="noopener">HomeManager</a></p>
+            <div class="footer-bottom">
+                <p>© 2025 BUNIVA Technologies. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
     <script src="../script.js"></script>
-
 </body>
-
 </html>

@@ -8,26 +8,26 @@
     --primary-color: #0d9488;
     --primary-light: #14b8a6;
     --primary-dark: #0f766e;
-    
+
     /* Section Backgrounds */
     --bg-mint: #e8f5f3;
     --bg-cream: #faf5f0;
     --bg-light-gray: #f8f9fa;
     --bg-white: #ffffff;
-    
+
     /* Text Colors */
     --text-dark: #1a1a1a;
     --text-body: #4a4a4a;
     --text-muted: #6b7280;
-    
+
     /* Other */
     --border-color: #e5e7eb;
     --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
-    
+
     /* Typography */
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    
+
     /* Spacing */
     --spacing-xs: 0.25rem;
     --spacing-sm: 0.5rem;
@@ -37,7 +37,7 @@
     --spacing-2xl: 2.5rem;
     --spacing-3xl: 3rem;
     --spacing-4xl: 4rem;
-    
+
     /* Border Radius */
     --radius-sm: 8px;
     --radius-md: 12px;
@@ -86,7 +86,10 @@ body {
     padding: 0 var(--spacing-xl);
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-weight: 700;
     line-height: 1.2;
     color: var(--text-dark);
@@ -281,6 +284,28 @@ a {
     justify-content: center;
 }
 
+/* Hero entrance animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content {
+    max-width: 540px;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.hero-visual {
+    animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
 /* ============================================
    Buttons
    ============================================ */
@@ -364,7 +389,7 @@ a {
     margin-bottom: var(--spacing-lg);
 }
 
-.section-content > p {
+.section-content>p {
     font-size: 1.1rem;
     margin-bottom: var(--spacing-xl);
     max-width: 480px;
@@ -437,7 +462,7 @@ a {
     margin-bottom: var(--spacing-md);
 }
 
-.product-info > p {
+.product-info>p {
     margin-bottom: var(--spacing-xl);
     line-height: 1.7;
 }
@@ -491,11 +516,13 @@ a {
     border-radius: var(--radius-lg);
     background: var(--bg-light-gray);
     transition: all 0.2s;
+    text-align: center;
 }
 
 .feature-card:hover {
     transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 8px 30px rgba(13, 148, 136, 0.15);
+    border: 1px solid var(--primary-light);
 }
 
 .feature-icon {
@@ -508,7 +535,7 @@ a {
     justify-content: center;
     color: white;
     font-size: 1.25rem;
-    margin-bottom: var(--spacing-md);
+    margin: 0 auto var(--spacing-md) auto;
 }
 
 .feature-card h3 {
@@ -554,7 +581,7 @@ a {
 }
 
 .about-stat {
-    text-align: left;
+    text-align: center;
 }
 
 .about-stat .stat-number {
@@ -688,7 +715,7 @@ a {
     margin-bottom: var(--spacing-lg);
 }
 
-.contact-content > p {
+.contact-content>p {
     font-size: 1.1rem;
     margin-bottom: var(--spacing-xl);
     max-width: 480px;
@@ -734,6 +761,11 @@ a {
 
 .contact-card.phone i {
     background: var(--primary-color);
+    color: white;
+}
+
+.contact-card.email i {
+    background: #EA4335;
     color: white;
 }
 
@@ -839,6 +871,7 @@ a {
    ============================================ */
 
 @media (max-width: 1024px) {
+
     .hero-grid,
     .section-grid,
     .contact-grid,
@@ -846,36 +879,36 @@ a {
         grid-template-columns: 1fr;
         gap: var(--spacing-3xl);
     }
-    
+
     .hero-content,
     .section-content,
     .contact-content,
     .product-info {
         max-width: 100%;
     }
-    
+
     .section-visual,
     .product-visual {
         order: -1;
     }
-    
+
     .hero-visual {
         order: 1;
     }
-    
+
     .features-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .services-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .footer-grid {
         grid-template-columns: 1fr 1fr;
         gap: var(--spacing-xl);
     }
-    
+
     .dashboard-mockup {
         width: 100%;
         max-width: 420px;
@@ -888,27 +921,33 @@ a {
         min-height: auto;
         padding-bottom: var(--spacing-3xl);
     }
-    
+
     .features-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .hero-buttons,
     .work-options {
         flex-direction: column;
         align-items: flex-start;
     }
-    
+
     .btn {
         width: 100%;
         justify-content: center;
         max-width: 280px;
+        min-height: 48px;
     }
-    
+
+    .footer-social a {
+        width: 44px;
+        height: 44px;
+    }
+
     .about-stats {
         gap: var(--spacing-xl);
     }
-    
+
     /* Mobile Navigation */
     .main-nav {
         position: fixed;
@@ -923,20 +962,20 @@ a {
         padding: var(--spacing-3xl) var(--spacing-xl);
         z-index: 1001;
     }
-    
+
     .main-nav.active {
         right: 0;
     }
-    
+
     .main-nav ul {
         flex-direction: column;
         gap: var(--spacing-lg);
     }
-    
+
     .main-nav a {
         font-size: 1.1rem;
     }
-    
+
     .nav-toggle-btn {
         display: flex;
         align-items: center;
@@ -944,7 +983,7 @@ a {
         width: 40px;
         height: 40px;
     }
-    
+
     .nav-close-btn {
         display: block;
         position: absolute;
@@ -952,36 +991,36 @@ a {
         right: var(--spacing-md);
         font-size: 2rem;
     }
-    
+
     .header-actions .btn-whatsapp span {
         display: none;
     }
-    
+
     .footer-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .footer-bottom {
         flex-direction: column;
         gap: var(--spacing-md);
         text-align: center;
     }
-    
+
     .dashboard-mockup {
         max-width: 100%;
     }
-    
+
     .contact-visual {
         width: 200px;
         height: 200px;
     }
-    
+
     .contact-icon-large {
         width: 80px;
         height: 80px;
         font-size: 2rem;
     }
-    
+
     .pulse-ring {
         width: 140px;
         height: 140px;
@@ -989,27 +1028,31 @@ a {
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
     h1 {
         font-size: 2rem;
     }
-    
+
     h2 {
         font-size: 1.75rem;
     }
-    
+
     .product-card-large {
         padding: var(--spacing-xl);
     }
-    
+
     .feature-card {
         padding: var(--spacing-lg);
     }
-    
+
     .about-stats {
         flex-direction: column;
         gap: var(--spacing-md);
     }
-    
+
     .stat-cards {
         flex-direction: column;
     }
@@ -1032,6 +1075,42 @@ a {
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0;
+}
+
+/* Scroll Reveal Animation */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Header scroll effect */
+.site-header.scrolled {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .fade-in-section {
+        opacity: 1;
+        transform: none;
+    }
 }
 
 
@@ -1103,9 +1182,20 @@ a {
     font-size: 0.9rem;
 }
 
-.card-1 { top: 40px; left: 20px; }
-.card-2 { top: 60px; right: 0; }
-.card-3 { bottom: 60px; right: 40px; }
+.card-1 {
+    top: 40px;
+    left: 20px;
+}
+
+.card-2 {
+    top: 60px;
+    right: 0;
+}
+
+.card-3 {
+    bottom: 60px;
+    right: 40px;
+}
 
 .connection-lines {
     position: absolute;
@@ -1170,9 +1260,21 @@ a {
     letter-spacing: 0.5px;
 }
 
-.node-1 { top: 30px; left: 50%; transform: translateX(-50%); }
-.node-2 { bottom: 60px; left: 40px; }
-.node-3 { bottom: 60px; right: 40px; }
+.node-1 {
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.node-2 {
+    bottom: 60px;
+    left: 40px;
+}
+
+.node-3 {
+    bottom: 60px;
+    right: 40px;
+}
 
 /* ============================================
    Dashboard Mockup - Products
@@ -1207,8 +1309,13 @@ a {
     background: #ff5f57;
 }
 
-.mockup-dots span:nth-child(2) { background: #ffbd2e; }
-.mockup-dots span:nth-child(3) { background: #28ca41; }
+.mockup-dots span:nth-child(2) {
+    background: #ffbd2e;
+}
+
+.mockup-dots span:nth-child(3) {
+    background: #28ca41;
+}
 
 .mockup-title {
     color: white;
@@ -1292,7 +1399,7 @@ a {
 }
 
 .stat-card.highlight .stat-label {
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .chart-placeholder {
@@ -1359,6 +1466,7 @@ a {
         transform: scale(0.8);
         opacity: 0.5;
     }
+
     100% {
         transform: scale(1.4);
         opacity: 0;
@@ -1374,12 +1482,12 @@ a {
         width: 320px;
         height: 320px;
     }
-    
+
     .dashboard-mockup {
         width: 100%;
         max-width: 380px;
     }
-    
+
     .hero-visual,
     .section-visual {
         order: -1;
@@ -1392,64 +1500,80 @@ a {
         width: 280px;
         height: 280px;
     }
-    
+
     .floating-card {
         padding: var(--spacing-sm) var(--spacing-md);
     }
-    
+
     .floating-card .card-icon {
         width: 28px;
         height: 28px;
         font-size: 0.8rem;
     }
-    
+
     .floating-card .card-text {
         font-size: 0.8rem;
     }
-    
-    .card-1 { top: 20px; left: 10px; }
-    .card-2 { top: 40px; right: -10px; }
-    .card-3 { bottom: 40px; right: 20px; }
-    
+
+    .card-1 {
+        top: 20px;
+        left: 10px;
+    }
+
+    .card-2 {
+        top: 40px;
+        right: -10px;
+    }
+
+    .card-3 {
+        bottom: 40px;
+        right: 20px;
+    }
+
     .center-circle {
         width: 70px;
         height: 70px;
         font-size: 1.5rem;
     }
-    
+
     .ways-center {
         width: 90px;
         height: 90px;
         font-size: 0.85rem;
     }
-    
+
     .way-node {
         width: 60px;
         height: 60px;
     }
-    
+
     .way-node .node-number {
         font-size: 1rem;
     }
-    
+
     .way-node .node-label {
         font-size: 0.6rem;
     }
-    
-    .node-2 { left: 20px; }
-    .node-3 { right: 20px; }
-    
+
+    .node-2 {
+        left: 20px;
+    }
+
+    .node-3 {
+        right: 20px;
+    }
+
     .contact-visual {
         width: 240px;
         height: 240px;
     }
-    
+
     .contact-icon-large {
         width: 90px;
         height: 90px;
         font-size: 2.5rem;
     }
-    
+
     .pulse-ring {
         width: 160px;
         height: 160px;
@@ -1461,11 +1585,11 @@ a {
         width: 240px;
         height: 240px;
     }
-    
+
     .floating-card .card-text {
         display: none;
     }
-    
+
     .floating-card {
         padding: var(--spacing-sm);
     }

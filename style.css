@@ -255,6 +255,16 @@ a {
     width: auto;
 }
 
+.hero-brand {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+}
+
 .hero-byline {
     display: block;
     font-size: 0.9rem;

@@ -55,13 +55,20 @@
         "url": "https://buniva.co.ke",
         "logo": "https://buniva.co.ke/buniva_logo.png",
         "description": "Kenyan tech startup focused on software and data engineering. Creators of HomeManager property management software.",
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+254-797-259-698",
-            "contactType": "customer service",
-            "areaServed": "KE",
-            "availableLanguage": ["English", "Swahili"]
-        },
+        "contactPoint": [
+            {
+                "@type": "ContactPoint",
+                "telephone": "+254-797-259-698",
+                "contactType": "customer service",
+                "areaServed": "KE",
+                "availableLanguage": ["English", "Swahili"]
+            },
+            {
+                "@type": "ContactPoint",
+                "email": "info@buniva.co.ke",
+                "contactType": "customer service"
+            }
+        ],
         "address": {
             "@type": "PostalAddress",
             "addressCountry": "KE"
@@ -310,6 +317,13 @@
                         <p>Interested in HomeManager? Want to explore a partnership or custom project? Reach out — we
                             respond fast.</p>
                         <div class="contact-methods">
+                            <a href="mailto:info@buniva.co.ke" class="contact-card email">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <span class="contact-label">Email Us</span>
+                                    <span class="contact-value">info@buniva.co.ke</span>
+                                </div>
+                            </a>
                             <a href="https://wa.me/254797259698" target="_blank" rel="noopener"
                                 class="contact-card whatsapp">
                                 <i class="fab fa-whatsapp"></i>
@@ -330,7 +344,7 @@
                     <div class="section-visual">
                         <div class="contact-visual">
                             <div class="contact-icon-large">
-                                <i class="fab fa-whatsapp"></i>
+                                <i class="fas fa-envelope"></i>
                             </div>
                             <div class="pulse-ring"></div>
                             <div class="pulse-ring delay"></div>
@@ -366,6 +380,7 @@
                 <div class="footer-column">
                     <h4>Contact</h4>
                     <ul>
+                        <li><a href="mailto:info@buniva.co.ke">info@buniva.co.ke</a></li>
                         <li><a href="tel:+254797259698">+254 797 259 698</a></li>
                         <li><a href="https://wa.me/254797259698" target="_blank" rel="noopener">WhatsApp</a></li>
                     </ul>

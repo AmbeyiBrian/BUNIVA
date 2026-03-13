@@ -936,10 +936,19 @@ a {
         grid-template-columns: 1fr;
     }
 
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-content p,
+    .hero-byline {
+        text-align: center;
+    }
+
     .hero-buttons,
     .work-options {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
     .btn {
@@ -1101,9 +1110,14 @@ a {
 
 /* Header scroll effect */
 .site-header.scrolled {
+    background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .site-header.scrolled {
+    background: rgba(17, 24, 39, 0.85);
 }
 
 /* Accessibility: Reduced Motion */
